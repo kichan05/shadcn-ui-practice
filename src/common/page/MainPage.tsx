@@ -1,6 +1,13 @@
-import {ComponentProps, FC, useState} from "react";
+import {FC, useState} from "react";
 import styled from "styled-components";
 import {MobileLayout} from "../layout/MobileLayout";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 export type MainPageProps = {}
 
@@ -11,9 +18,19 @@ export const MainPage: FC<MainPageProps> = () => {
     const [name, setName] = useState("")
     return (
         <MobileLayout>
-            <MainPageStyle>
-                메인페이지
-            </MainPageStyle>
+            <div className={"flex w-full max-w-sm flex-col gap-8 py-12"}>
+                <Carousel>
+                    <CarouselContent>
+                        <CarouselItem className={"basis-1/3 bg-amber-600"}>1111</CarouselItem>
+                        <CarouselItem className={"basis-1/3 bg-amber-600"}>2222</CarouselItem>
+                        <CarouselItem className={"basis-1/3 bg-amber-600"}>3333</CarouselItem>
+                        <CarouselItem className={"basis-1/3 bg-amber-600"}>4444</CarouselItem>
+                        <CarouselItem className={"basis-1/3 bg-amber-600"}>5555</CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                </Carousel>
+            </div>
         </MobileLayout>
     );
 };

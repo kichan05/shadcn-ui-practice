@@ -7,6 +7,7 @@ import {GlobalStyle} from "./common/style/GlobalStyle";
 import {BrowserRouter, createBrowserRouter, RouterProvider} from "react-router-dom";
 import {routeConfig} from "./common/router/RouteConfig";
 import {router} from "./common/router/router";
+import './index.css'
 
 
 createRoot(document.getElementById('root')!).render(
